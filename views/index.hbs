@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      font-family: 'Ubuntu', sans-serif; 
+    }
+    .navbar{
+      font-family: 'Merriweather', serif;
+    }
+    .partner1 {
+      background-image: url({{partner.image1}});
+    }
+
+    .partner2 {
+      background-image: url({{partner.image2}});
+    }
+  </style>
+</head>
+
+<body>
+
+  {{>navbar data=details}}
+
+  {{>slider slides=slider}}
+
+
+
+  {{!-- {{Our Journey}} --}}
+
+  <section id="Journey_section" class="py-4">
+    <div class="container-fluid">
+      <h1 class="text-center text-primary">Our Journey</h1>
+      <div class="text-center">
+        <p>
+          {{journey.par1}}
+        </p>
+        <p>
+          {{journey.par2}}
+        </p>
+        <a class="read_more" href="/journey">Read more...--></a>
+      </div>
+      <br>
+    </div>
+  </section>
+  <hr>
+
+
+
+  {{!-- {{Popular Product}} --}}
+
+  <section id="Popular_product" class="py-4">
+    <div class="container">
+      <h1 class="text-center text-primary">Popular Product</h1>
+      <div class="row mt-5">
+
+        {{#each product}}
+        <div class="col-md-4 product_align">
+          <div class="card m-3" style="width: 18rem;">
+            <img src={{this.imageUrl}} class="card-img-top" alt="...">
+            <div class="card-body shadow p-3 mb-3 bg-plack rounded">
+              <h5 class="card-title text-black">{{this.title}} </h5>
+              <p class="card-text text-black">{{this.para}} </p>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+  </section>
+  <hr>
+  <br>
+
+
+
+  {{!-- {{Partner with us }} --}}
+  <section class="partner-with-us">
+    <div class="partner-with-us container text-center mt-4 mb-5">
+      <div class="row">
+
+        <div class="col-md-6 partner1 pt-5">
+          <h1>Partner with us</h1>
+          <p>Teaming up with us means not just great profit margins for you. It means becoming a part of the
+            ever-expanding coffeeforyou family.</p>
+          <a href="/about" class="read_more1">
+            Partner with us..
+          </a>
+        </div>
+
+        <div class="col-md-6 partner2 pt-5">
+          <h1>Contact us</h1>
+          <p>Teaming up with us means not just great profit margins for you. It means becoming a part of the
+            ever-expanding coffeeforyou family.</p>
+          <a href="/contact" class="read_more1">
+            Contact us..
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <hr>
+
+
+  {{!-- {{Fotter}} --}}
+  {{>footer foot=footer}}
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

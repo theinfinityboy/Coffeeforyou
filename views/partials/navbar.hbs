@@ -1,0 +1,36 @@
+
+{{#each data}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary py-3 border-bottom ">
+
+
+  <div class="container">
+   <a class="navbar-brand text-center" href="/">
+      <img src="{{this.brandIconUrl}}" alt="Logo" width="30" height="30" border-radius= 10pxclass="d-inline-block align-text-top">
+      {{this.brandName}}
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span   class="navbar-toggler-icon"></span>
+    </button> 
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center">
+
+        {{#each this.links}}
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+          </li>
+
+        {{/each}}
+
+        </li>
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+{{/each}}
