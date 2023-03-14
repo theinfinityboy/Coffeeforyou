@@ -74,6 +74,7 @@ routes.post("/process-contact-form",async(req,res)=>{
     //     extended:true
     // }))
     console.log(req.body)
+    
     try{
         const data = await Contact.create(
             req.body
