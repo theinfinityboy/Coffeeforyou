@@ -3,11 +3,6 @@ const app = express()
 const mongoose = require("mongoose")
 const routes = require('./routes/main')
 const hbs = require('hbs')
-// const detail = require("./models/Detail")
-// const Slider = require("./models/Slider")
-// const Footer = require("./models/footer")
-// const Product = require("./models/product")
-// const Journey = require("./models/journey")
 
 
 // order to be maintain
@@ -32,15 +27,17 @@ app.set('views','views')
 // it is help in use of navbar templet   "  {{>navbar}}  " <<-- this funtion
 hbs.registerPartials("views/partials")
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/website_tut',()=>{
-    console.log("db connect");
-    console.log("this is the app.js db is running fine");
+// mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/website_tut
+// mongodb://127.0.0.1:27017/website_tut
+// mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/?retryWrites=true&w=majority
+mongoose.connect('mongodb+srv://lakshya:lakshya@todo.u8ehbeu.mongodb.net/website_tut?retryWrites=true&w=majority',()=>{
+    console.log("db connect hello my friends ");
+    console.log("this is the app.js dp is running fine");
+   
 })
 
 
-
-
-app.listen(5511 | process.env.PORT,()=>{
-    console.log(`sever started ${5511}`);
-})
+let port = 5000;
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })

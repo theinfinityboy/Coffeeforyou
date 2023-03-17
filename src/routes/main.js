@@ -16,6 +16,7 @@ routes.get("/",async(req,res)=>{
     const details = await Detail.find();
     const footer = await Footer.find();
     const partner = await Partner.findOne();
+    // const product_active = await Product.find({class:"active"});
     const product = await Product.find();
     const slider = await Slider.find();
     const journey = await Journey.findOne();
@@ -74,7 +75,6 @@ routes.post("/process-contact-form",async(req,res)=>{
     //     extended:true
     // }))
     console.log(req.body)
-    
     try{
         const data = await Contact.create(
             req.body
@@ -88,5 +88,6 @@ routes.post("/process-contact-form",async(req,res)=>{
     }
 
 })
+
 
 module.exports = routes
