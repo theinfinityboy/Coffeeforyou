@@ -3,7 +3,7 @@ const app = express()
 const mongoose = require("mongoose")
 const routes = require('./routes/main')
 const hbs = require('hbs')
-
+const path = require('path')
 
 // order to be maintain
 // it en code the data to incripted formate
@@ -14,19 +14,19 @@ app.use(bodyParser.urlencoded({
 
 // we can use public resource in public 
 // all the main route is in the file router 
-app.use("/static",express.static('public'))
-app.use("",routes)
+app.use("/static",express.static(path.join(__dirname, '../public')))
 
 
 // making the default hbs (if any one save the file without hbs then it recongnize is as hbs automatic)
 // it is going to find the file in tht views folder 
-app.set("view engine",'hbs')
-app.set('views','views')
+app.set('view engine', 'hbs')
+app.set('views',path.join(__dirname, '/views'))
 // mongoose.set('strictQuery', true);
 
 // it is help in use of navbar templet   "  {{>navbar}}  " <<-- this funtion
-hbs.registerPartials("views/partials")
-
+hbs.registerPartials(path.join(__dirname, "views/partials"))
+// console.log(path.join(__dirname, "views/partials"));
+app.use("",routes)
 // mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/website_tut
 // mongodb://127.0.0.1:27017/website_tut
 // mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/?retryWrites=true&w=majority

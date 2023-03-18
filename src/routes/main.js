@@ -21,7 +21,7 @@ routes.get("/",async(req,res)=>{
     const slider = await Slider.find();
     const journey = await Journey.findOne();
 
-    res.render('index',{
+    res.render("index.hbs",{
         details:details,
         slider:slider,
         footer:footer,
