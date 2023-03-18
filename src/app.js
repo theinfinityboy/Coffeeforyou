@@ -27,10 +27,10 @@ app.set('views',path.join(__dirname, '/views'))
 hbs.registerPartials(path.join(__dirname, "views/partials"))
 // console.log(path.join(__dirname, "views/partials"));
 app.use("",routes)
-// mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/website_tut
-// mongodb://127.0.0.1:27017/website_tut
-// mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/?retryWrites=true&w=majority
-mongoose.connect('mongodb+srv://lakshya:lakshya@todo.u8ehbeu.mongodb.net/website_tut?retryWrites=true&w=majority',()=>{
+
+
+
+mongoose.connect('mongodb://127.0.0.1:27017/website_tut',()=>{
     console.log("db connect hello my friends ");
     console.log("this is the app.js dp is running fine");
    

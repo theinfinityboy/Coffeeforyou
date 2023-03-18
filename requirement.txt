@@ -3,3 +3,7 @@ npm install mongoose
 npm install body-parser
 npm install hbs
 npm install nodemon --save-dev
+
+// mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/website_tut
+// mongodb://127.0.0.1:27017/website_tut
+// mongodb+srv://lakshya:<password>@todo.u8ehbeu.mongodb.net/?retryWrites=true&w=majority
