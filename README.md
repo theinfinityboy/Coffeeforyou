@@ -12,7 +12,7 @@ This is full dynamic website website
 ## Installation
 
 To deploy this project run
-- I have remove bigger file so run these command to download these module
+- We have removed bigger file so run these command to download these module
 ```bash
   npm intall
 ```
