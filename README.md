@@ -30,6 +30,6 @@ You can contact me on the gmail ( rajavarunbabu@gmail.com )
 
 
 ## Authors
-- [@Raja BABU](https://github.com/theinfinityboy)
+- [@Raja Babu](https://github.com/theinfinityboy)
 - [@Lakshagrawal](https://github.com/Lakshagrawal)
 
