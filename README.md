@@ -7,7 +7,7 @@ This is full dynamic website website
  - Express.js (hbs) as the template backend
  - It has also Mongodb Atlas connectivity which is Virtual data center
  - You can access/edit its data(feedback)/content of the page any where in the world with the Mongodb Atlas connectivity
- - To help my friend in growing in business we have made this dynamic website.
+ - To help our friend in growing in business(startup) we have made this dynamic website.
 
 ## Installation
 
